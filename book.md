@@ -1,4 +1,5 @@
 # Precious Little life
+skuchno, peredelivay
 
 ## Chapter 1: Carefree childhood
 a long time ago, somethere out there
