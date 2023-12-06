@@ -1,5 +1,5 @@
 # Precious Little life
-he-he, conflict delaet "Your main file is broken"
+shas slomayu
 
 ## Chapter 1: Carefree childhood
 a long time ago, somethere out there
