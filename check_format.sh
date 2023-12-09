@@ -3,12 +3,17 @@
 #String for checking
 format_string="I'm BRUH"
 
-#Write filenames and paths in array, use -r for recursion, -l for only filename output,
-# -w for full comaring of word
-mapfile -t files_arr < <(grep -rlw  --include="*.txt" "$format_string")
+shopt -s globstar #without this we check only depth directories,
+# and with it root directory too
 
-#check result
-for el in "${files_arr[@]}"; do
-    echo "$el"
-    git add "$el"
+for file in ./**/*.txt; do
+  if [ -f "$file" ] && grep -qw "$format_string" "$file"; then
+    echo "$file is good"
+  else
+    echo "$file OUT OF FORMAT!"
+    exit 1  
+  fi
 done
+
+echo "Well done! All writed"
+exit 0
